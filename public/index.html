@@ -1,89 +1,417 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.1.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.1.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.1.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head class="head" id="head">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body class="index-page">
+  
+  <header class="header" id="header">
+  
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-delay="100" class="">당신의 성장을 함께합니다.</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          VELDER는 학습 목표 달성을 지원하는 플랫폼입니다. </br> 맞춤형 학습 환경과 효율적인 관리 도구를 통해 학습의 새로운 차원을 경험해보세요. 
+        </p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="pricing.html" class="btn-get-started">지금 시작하기</a>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    </section><!-- /Hero Section -->
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+      
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+      
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>혁신적인 학습 관리 플랫폼</h3>
+            <p class="fst-italic">
+                VELDER는 학습자의 비전 설정부터 교육적 성장, 리더십 개발, 개인 역량 개발까지 지원하는 종합적인 학습 솔루션을 제공합니다. 체계적인 관리와 맞춤형 학습 계획을 통해 목표 달성을 돕습니다.
+            </p>
+            <ul>
+                <li><i class="bi bi-check-circle"></i> <span>학습 목표와 비전을 설정하여 맞춤형 학습 경로 제공</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>교육적 성장을 지원하는 체계적인 학습 관리 시스템</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>학생 간 상호작용을 통한 리더십 및 동기 부여 촉진</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>개인 역량을 개발할 수 있는 맞춤형 학습 자료 제공</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>고등학교 2, 3학년 과정 및 다양한 자격증 준비 중</span></li>
+            </ul>
+          </div>
+      
+        </div>
+      
+      </div>
+      
+
+    </section><!-- /About Section -->
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">V : Vision</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">E : Education
+              </p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">L : Leadership
+              </p>
+            </div>
+          </div><!-- End Stats Item -->
+          
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">D : Development 
+
+
+
+
+
+              </p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>왜 VELDER를 선택해야 할까요?</h3>
+              <p>
+                VELDER는 비전 설정(Vision), 교육적 성장(Education), 리더십 개발(Leadership), 개인 역량 개발(Development)을 통해 학습 경험을 극대화합니다. 학습 목표를 달성하는 데 필요한 모든 요소를 한 곳에서 만나보세요.
+              </p>
+              <div class="text-center">
+                
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+          
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="col-xl-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gear"></i>
+                  <h4>Vision</h4>
+                  <p>목표 설정 및 비전 수립</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-3">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-person-check"></i>
+                  <h4>Education</h4>
+                  <p>온라인 교육 플랫폼</p>
+                </div>
+              </div><!-- End Icon Box -->
+              
+              <div class="col-xl-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gear"></i>
+                  <h4>Leadership</h4>
+                  <p>리더십 훈련 프로그램</p>
+                </div>
+              </div><!-- End Icon Box -->
+              
+              
+              
+              <div class="col-xl-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-box"></i>
+                  <h4>Development</h4>
+                  <p>서비스: 개인 역량 개발 코칭</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+    
+        <div class="row gy-4">
+    
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-book" style="color: #ffbb2c;"></i>
+              <h3>국어 (초1~중3)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-calculator" style="color: #5578ff;"></i>
+              <h3>수학 (초1~고1)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-translate" style="color: #e80368;"></i>
+              <h3>내신 영어</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-globe" style="color: #e361ff;"></i>
+              <h3>사회 (초1~중등)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-graph-up" style="color: #e80368;"></i>
+              <h3>과학 (초1~중등)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <i class="bi bi-clock-history" style="color: #ffa76e;"></i>
+              <h3>역사 (중등)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <i class="bi bi-code" style="color: #11dbcf;"></i>
+              <h3>JavaScript</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <i class="bi bi-database" style="color: #4233ff;"></i>
+              <h3>Firebase</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="features-item">
+              <i class="bi bi-laptop" style="color: #b2904f;"></i>
+              <h3>ReactJS</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="features-item">
+              <i class="bi bi-plug" style="color: #b20969;"></i>
+              <h3>전기 관련 자격증 (준비중)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="features-item">
+              <i class="bi bi-file-earmark-text" style="color: #ff5828;"></i>
+              <h3>한국사 관련 자격증 (준비중)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+          
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+            <div class="features-item">
+              <i class="bi bi-flag" style="color: #29cc61;"></i>
+              <h3>토익 (준비중)</h3>
+            </div>
+          </div><!-- End Feature Item -->
+    
+        </div><!-- End Feature Item -->
+    
+      </div>
+    
+    </section><!-- /Features Section -->
+    
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Service Plan</h2>
+        <p class="">서비스 플랜</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Standard</p>
+                  <p class="price">월 11,000원</p>
+                </div>
+
+                <h3><a href="course-details.html">학습 관리 서비스</a></h3>
+                <p class="description">계획표에 따라 수행실적 확인 및 동기부여 / 학습 관리 및 코칭 및 자기주도학습 증진(학습 컨텐츠 미제공)</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Youth</p>
+                  <p class="price">월 99,000원</p>
+                </div>
+
+                <h3><a href="pricing.html">전과목 학습자료 및 학습 관리 서비스 제공</a></h3>
+                <p class="description">초등학교 1학년~중학교 3학년까지의 과정들 전과목 학습 컨텐츠 제공/ 계획에 따른 숙제 제공 및 오답노트와 내신대비 문제 제공/ 계획표에 따라 수행실적 확인 및 동기부여 / 학습 관리 및 코칭 및 자기주도학습 증진</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Pro</p>
+                  <p class="price">준비중</p>
+                </div>
+
+                <h3><a href="pricing.html">자기 계발 자료 제공</a></h3>
+                <p class="description">토익/전공 자격증/프로그래밍 등 자기계발에 도움이 되는 자료 제공</br>(준비중)</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+          
+
+          
+
+               
+
+        
+               
+        </div>
+
+      </div>
+
+    </section><!-- /Courses Section -->
+
+    <!-- Trainers Index Section -->
+    <section id="trainers-index" class="section trainers-index">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-1.jpeg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>이대희</h4>
+                <span>CEO,Web Development,Marketing,content</span>
+                <p>
+                  Information and Communication Engineering Major at KOREATECH
+                
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-2.jpeg" class="img-fluid" alt="">
+              
+            </div>
+          </div><!-- End Team Member -->
+
+          
+
+        </div>
+ㅇ
+      </div>
+
+    </section><!-- /Trainers Index Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative"></footer>
+
+  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <!-- Main JS File -->
+  
+  <script type="text/javascript" src="assets/js/navbar.js"></script>
+  <script type="text/javascript" src="assets/js/head.js"></script>
+  <script type="text/javascript" src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/login.js"></script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> 
+</body>
+
+
+ 
 </html>
