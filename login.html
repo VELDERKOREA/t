@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="head" id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 | VELDER</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css"> <!-- CSS 파일에 맞게 스타일을 적용 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="login-page">
+
+  <header class="header" id="header">
+    <!-- 동일한 네비게이션 바를 사용할 수 있도록 함 -->
+  </header>
+
+  <main class="main">
+    <section id="login-section" class="login-section section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="login-card"></br>
+              <h3 class="text-center mb-4">VELDER</h3>
+
+              <!-- 로그인 폼 -->
+              <form id="loginForm" action="#" method="POST" autocomplete="off">
+                <div class="mb-3">
+                  <label for="email" class="form-label">이메일</label>
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="이메일을 입력하세요">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">비밀번호</label>
+                  <input type="password" class="form-control" id="password" name="password" required placeholder="비밀번호를 입력하세요">
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">로그인 상태 유지</label>
+                  </div>
+                  <a href="#" class="forgot-password">비밀번호를 잊으셨나요?</a>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-4">로그인</button>
+              </form>
+
+              <div class="text-center mt-4">
+                <p>계정이 없으신가요? <a href="signup.html">회원가입</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <!-- 동일한 푸터 사용 가능 -->
+  </footer>
+
+  <script src="assets/js/login.js"></script> <!-- 로그인 관련 JS 추가 -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
